@@ -1,9 +1,14 @@
-{% section 'index' %}
+{% section 'header' %}
+
+{% section 'hero' %}
+{% section 'text_section' %}
+{% section 'custom_html' %}
+
+{% section 'footer' %}
 
 {% schema %}
 {
   "name": "Home page",
-  "max_blocks": 16,
   "settings": [],
   "blocks": [
     {
@@ -16,11 +21,14 @@
     },
     {
       "type": "custom_html",
-      "name": "Custom HTML"
+      "name": "Custom HTML Section"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Default",
+      "category": "Home"
     }
   ]
 }
 {% endschema %}
-
-{% section 'header' %}
-{% section 'footer' %}
