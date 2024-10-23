@@ -5,21 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ page_title }}</title>
 
-    <!-- Shopify Content for Header -->
     {{ content_for_header }}
 
-    <!-- Load Theme CSS -->
     <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}">
   </head>
-
   <body>
-    <!-- Shopify Content for Notifications -->
     {{ content_for_notifications }}
 
-    <!-- Header Section -->
     {% section 'header' %}
 
-    <!-- Main Content -->
     <main role="main">
       {% if template == 'index' %}
         {% section 'index' %}
@@ -28,10 +22,8 @@
       {% endif %}
     </main>
 
-    <!-- Footer Section -->
     {% section 'footer' %}
 
-    <!-- Shopify Content for Footer -->
     {{ content_for_footer }}
   </body>
 </html>
