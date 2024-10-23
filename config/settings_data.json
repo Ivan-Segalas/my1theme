@@ -1,0 +1,35 @@
+{
+  "current": "default",
+  "presets": {
+    "default": {
+      "settings": {},
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {}
+        },
+        "hero": {
+          "type": "hero",
+          "settings": {
+            "heading": "Welcome to Our Store",
+            "subheading": "We offer the best products."
+          }
+        },
+        "text_section": {
+          "type": "text_section",
+          "settings": {}
+        },
+        "custom_html": {
+          "type": "custom_html",
+          "settings": {
+            "custom_html": "<p>Custom HTML content goes here.</p>"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "settings": {}
+        }
+      }
+    }
+  }
+}
