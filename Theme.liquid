@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ page_description }}">
+
+    <!-- Dynamic Page Title -->
+    <title>{{ page_title }}</title>
+
+    <!-- Favicon (optional) -->
+    <link rel="icon" href="{{ 'favicon.ico' | asset_url }}">
+
+    <!-- Load CSS -->
+    <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}">
+
+    <!-- Shopify: Inject SEO metadata, styles, and scripts -->
+    {{ content_for_header }}
+
+    <!-- Additional Custom Meta (if needed) -->
+    <meta name="keywords" content="Shopify, My Store, Products">
+  </head>
+
+  <body>
+    <!-- Shopify: Notification (if any) -->
+    {{ content_for_notifications }}
+
+    <!-- Header Section (loaded from sections/header.liquid) -->
+    {% section 'header' %}
+
+    <!-- Main Content -->
+    <main>
+      {{ content_for_layout }}
+    </main>
+
+    <!-- Footer Section (loaded from sections/footer.liquid) -->
+    {% section 'footer' %}
+
+    <!-- Load JavaScript -->
+    <script src="{{ 'theme.js' | asset_url }}"></script>
+
+    <!-- Shopify: Additional Scripts -->
+    {{ content_for_footer }}
+  </body>
+</html>
