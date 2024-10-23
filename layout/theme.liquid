@@ -19,9 +19,13 @@
     <!-- Header Section -->
     {% section 'header' %}
 
-    <!-- Main Content (dynamic) -->
+    <!-- Main Content (Home Page or Template Pages) -->
     <main role="main">
-      {{ content_for_layout }}
+      {% if template == 'index' %}
+        {% section 'index' %}
+      {% else %}
+        {{ content_for_layout }}
+      {% endif %}
     </main>
 
     <!-- Footer Section -->
