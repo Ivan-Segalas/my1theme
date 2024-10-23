@@ -1,46 +1,33 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ page_description }}">
-
-    <!-- Dynamic Page Title -->
     <title>{{ page_title }}</title>
 
-    <!-- Favicon (optional) -->
-    <link rel="icon" href="{{ 'favicon.ico' | asset_url }}">
-
-    <!-- Load CSS -->
-    <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}">
-
-    <!-- Shopify: Inject SEO metadata, styles, and scripts -->
+    <!-- Shopify Content for Header -->
     {{ content_for_header }}
 
-    <!-- Additional Custom Meta (if needed) -->
-    <meta name="keywords" content="Shopify, My Store, Products">
+    <!-- Load Theme CSS -->
+    <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}">
   </head>
 
   <body>
-    <!-- Shopify: Notification (if any) -->
+    <!-- Shopify Content for Notifications -->
     {{ content_for_notifications }}
 
-    <!-- Header Section (loaded from sections/header.liquid) -->
+    <!-- Header Section -->
     {% section 'header' %}
 
-    <!-- Main Content -->
-    <main>
+    <!-- Main Content (dynamic) -->
+    <main role="main">
       {{ content_for_layout }}
     </main>
 
-    <!-- Footer Section (loaded from sections/footer.liquid) -->
+    <!-- Footer Section -->
     {% section 'footer' %}
 
-    <!-- Load JavaScript -->
-    <script src="{{ 'theme.js' | asset_url }}"></script>
-
-    <!-- Shopify: Additional Scripts -->
+    <!-- Shopify Content for Footer -->
     {{ content_for_footer }}
   </body>
 </html>
